@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 40px;
+    align-items: center; 
+    position: relative;
+}
+
+.nav-list{
+    display: flex;
+    gap: 32px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header{
+    background-color: #0f172a;
+    border-bottom: 1px solid #1e293b;
+}
+
+.name-logo{
+    text-decoration: none;
+    color: #f8fafc;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.nav-button{
+    text-decoration: none;
+    color: #c8d4e4;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
