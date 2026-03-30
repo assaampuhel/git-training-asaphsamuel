@@ -10,15 +10,15 @@
     
     <header class="relative z-50 bg-background border-b border-slate-800 transition-all duration-300">
 
-        <nav class="flex relative justify-between items-center py-5 px-10 max-w-[1400px] mx-auto">
+        <nav class="flex relative justify-between items-center py-5 px-10 max-w-full mx-auto">
             <input type="checkbox" class="hidden peer" id="mobile-menu-toggle" aria-label="Toggle mobile menu" title="Toggle mobile menu">
 
             <a href="#" class="text-4xl no-underline font-extrabold text-primary">AS.</a>
 
             <div class="absolute left-1/2 -translate-x-1/2 gap-8 hidden md:flex">
-                <a href="#about" class=" text-slate-300 text-lg no-underline hover:text-primary tracking-wide transition-colors duration-300">ABOUT</a>
-                <a href="#projects" class="text-slate-300 text-lg no-underline hover:text-primary tracking-wide transition-colors duration-300">PROJECTS</a>
-                <a href="#contacts" class="text-slate-300 text-lg no-underline hover:text-primary tracking-wide transition-colors duration-300">CONTACTS</a>
+                <a href="#about" class="cursor-pointer text-slate-300 text-lg no-underline hover:text-primary tracking-wide transition-colors duration-300">ABOUT</a>
+                <a href="#projects" class="cursor-pointer text-slate-300 text-lg no-underline hover:text-primary tracking-wide transition-colors duration-300">PROJECTS</a>
+                <a href="#contacts" class="cursor-pointer text-slate-300 text-lg no-underline hover:text-primary tracking-wide transition-colors duration-300">CONTACTS</a>
             </div>
 
             <label for="mobile-menu-toggle" class="md:hidden cursor-pointer text-slate-300 hover:text-primary transition-colors">
@@ -36,36 +36,121 @@
         </nav>
     </header>
 
-    <main>
-        <section class="flex flex-col-reverse md:flex-row items-center justify-center md:justify-between min-h-[80vh] px-6 md:px-10 py-12 md:py-0 max-w-[1350px] mx-auto gap-12 md:gap-8">
-            
-            <div class="flex flex-col items-center md:items-start text-center md:text-left max-w-2xl">
-                <p class="text-primary font-mono text-lg mb-4">Hi, I'm</p>
-                <h1 class="text-5xl md:text-7xl font-extrabold text-slate-50 mb-6 leading-tight">Asaph Samuel</h1>
-                
-                <p class="text-lg text-textMuted leading-relaxed mb-10">
-                    Computer Science Student @ National Institute of Technology, Surathkal, focusing on competitive programming and building modern, efficient software solutions.
-                </p>
+    <main class="w-full bg-slate-900 overflow-hidden">
+        <div class="relative w-full">
+            <div class="pointer-events-none z-0 inset-0 absolute">
+                <div class="absolute inset-0 bg-[url('assets/hero-back.jpg')] bg-cover bg-center opacity-25"></div>
+                <div class="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/40 to-slate-900"></div>
+            </div>
 
-                <div class="flex flex-wrap justify-center md:justify-start gap-4 md:gap-5">
-                    <a href="#projects" class="no-underline bg-primary text-background font-semibold px-8 py-3 rounded text-lg hover:bg-sky-300 hover:-translate-y-1 transition-all duration-300 ">
-                        Projects
-                    </a>
-                    <a href="#contact" class="no-underline border border-primary text-primary px-8 py-3 rounded font-semibold hover:bg-primary/20 hover:-translate-y-1 duration-300 transition-all">
-                        Contact Me
-                    </a>
+            <section class="relative z-10 flex flex-col-reverse md:flex-row items-center justify-center md:justify-between min-h-[80vh] px-6 md:px-10 py-12 md:py-0 max-w-[1350px] mx-auto gap-12 md:gap-8">
+                
+                <div class="flex flex-col items-center md:items-start text-center md:text-left max-w-2xl">
+                    <p class="text-primary font-mono text-2xl mb-4 drop-shadow-md">Hi, I'm</p>
+                    <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight drop-shadow-md">ASAPH SAMUEL</h1>
+                    
+                    <p class="text-lg text-textMuted leading-relaxed mb-10 drop-shadow-md">
+                        Computer Science Student @ National Institute of Technology, Surathkal, focusing on competitive programming and building modern, efficient software solutions.
+                    </p>
+
+                    <div class="flex flex-wrap justify-center md:justify-start gap-4 md:gap-5 drop-shadow-md">
+                        <a href="#projects" class="no-underline bg-primary text-background font-semibold px-8 py-3 rounded text-lg hover:bg-sky-300 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+                            Projects
+                        </a>
+                        <a href="#contact" class="no-underline border border-primary text-primary px-8 py-3 rounded font-semibold hover:bg-primary/20 hover:-translate-y-1 duration-300 transition-all cursor-pointer">
+                            Contact Me
+                        </a>
+                    </div>
+                </div>
+
+                <div class="relative w-56 h-56 md:w-[400px] md:h-[400px] flex-shrink-0">
+                    <div class="absolute inset-0 bg-primary rounded-full blur-3xl animate-pulse opacity-20"></div> <!--Glowing effect-->
+                    
+                    <img 
+                        src="assets/photo.jpeg" 
+                        alt="Asaph Samuel" 
+                        class="rounded-full relative w-full h-full object-cover border-2 border-slate-700 shadow-2xl">
+                </div>
+
+            </section>
+        </div>
+
+        <br>
+        <br>
+
+        <section id="about">
+            <div class="max-w-[1350px] mx-auto px-6 md:px-10 py:20">
+                <div class="flex flex-col md:flex-row gap-16">
+
+                    <div class="flex-1"> <!--Languages & Skills-->
+                        <h2 class="text-3xl font-bold text-white mb-4">Skills</h2>
+                        <h3 class="text-xl text-slate-400 mb-4">Programming Languages</h3>
+                        <div class="flex flex-wrap gap-3 mb-6">
+                            <span class="flex items-center gap-2 text-slate-300 text-sm hover:-translate-y-[2px] transition-all duration 200 cursor-default shadow-sm mr-4">
+                                <img src="assets/icons/C.png" alt="Python logo" class="w-11 h-11 object-contain">
+                            </span>
+                            <span class="flex items-center gap-2 text-slate-300 text-sm hover:-translate-y-[2px] transition-all duration 200 cursor-default shadow-sm mr-4">
+                                <img src="assets/icons/c++.png" alt="C++ logo" class="w-11 h-11 object-contain">
+                            </span>
+                            <span class="flex items-center gap-2 text-slate-300 text-sm hover:-translate-y-[2px] transition-all duration 200 cursor-default shadow-sm mr-4">
+                                <img src="assets/icons/python.png" alt="Python logo" class="w-11 h-11 object-contain">
+                            </span>
+                            <span class="flex items-center gap-2 text-slate-300 text-sm hover:-translate-y-[2px] transition-all duration 200 cursor-default shadow-sm mr-3">
+                                <img src="assets/icons/html.png" alt="Python logo" class="w-12 h-12 object-contain">
+                            </span>
+                            <span class="flex items-center gap-2 text-slate-300 text-sm hover:-translate-y-[2px] transition-all duration 200 cursor-default shadow-sm mr-4">
+                                <img src="assets/icons/css.png" alt="Python logo" class="w-12 h-12 object-contain">
+                            </span>
+                        </div>
+
+                        <h3 class="text-xl text-slate-400 mb-4">Frameworks & Tools</h3>
+                        <div class="flex flex-wrap gap-3 mb-6">
+                            <span class="flex items-center gap-2 text-slate-300 text-sm hover:-translate-y-[2px] transition-all duration 200 cursor-default shadow-sm mr-4">
+                                <img src="assets/icons/tailwindcss.png" alt="Python logo" class="w-12 h-12 object-contain">
+                            </span>
+                            <span class="flex items-center gap-2 text-slate-300 text-sm hover:-translate-y-[2px] transition-all duration 200 cursor-default shadow-sm mr-4">
+                                <img src="assets/icons/git.png" alt="Python logo" class="w-12 h-12 object-contain">
+                            </span>
+                            <span class="flex items-center gap-2 text-slate-300 text-sm hover:-translate-y-[2px] transition-all duration 200 cursor-default shadow-sm mr-4">
+                                <img src="assets/icons/github.png" alt="Python logo" class="w-12 h-12 object-contain">
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="flex-1"> <!--Education-->
+                        <h2 class="text-3xl font-bold text-white mb-10">Education</h2>
+                        <div class="flex gap-4">
+                            
+                            <div class="flex flex-col items-center">
+                                <div class="flex items-center justify-center w-14 h-14 mt-0 z-10 shrink-0 overflow-hidden shadow-md">
+                                    <img src="assets/icons/nitk.png" alt="NITK Logo" class="w-full h-full object-contain p-1">
+                                </div>
+                                <div class="w-0.5 h-full bg-slate-700 mt-1"></div>
+                            </div>
+                            <div class="pb-10">
+                                <p class="text-white font-semibold text-xl">NITK Surathkal</p>
+                                <p class="text-primary text-sm">August 2025 - Present</p>
+                                <p class="text-slate-500 mt-1 text-base">BTech in Computer Science & Engineering</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="flex flex-col items-center">
+                                <div class="flex items-center justify-center w-14 h-14 mt-0 z-10 shrink-0 overflow-hidden shadow-md">
+                                    <img src="assets/icons/ism.png" alt="NITK Logo" class="w-full h-full object-contain p-1">
+                                </div>
+                                <div class="w-0.5 h-full bg-slate-700 mt-1"></div>
+                            </div>
+                            <div class="pb-10">
+                                <p class="text-white font-semibold text-xl">Indian School Muscat</p>
+                                <p class="text-primary text-sm">April 2011 - March 2025</p>
+                                <p class="text-slate-500 text-base mt-1">Basic Sciences with Math & Computer Science</p>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
-
-            <div class="relative w-56 h-56 md:w-[400px] md:h-[400px] flex-shrink-0">
-                <div class="absolute inset-0 bg-primary rounded-full blur-3xl animate-pulse opacity-20"></div> <!--Glowing effect-->
-                
-                <img 
-                    src="assets/photo.jpeg" 
-                    alt="Asaph Samuel" 
-                    class="rounded-full relative w-full h-full object-cover border-2 border-slate-700 shadow-2xl">
-            </div>
-
+            
         </section>
     </main>
 
