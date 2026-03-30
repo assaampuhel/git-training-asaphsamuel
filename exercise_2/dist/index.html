@@ -18,7 +18,7 @@
             <div class="absolute left-1/2 -translate-x-1/2 gap-8 hidden md:flex">
                 <a href="#about" class="cursor-pointer text-slate-300 text-lg no-underline hover:text-primary tracking-wide transition-colors duration-300">ABOUT</a>
                 <a href="#projects" class="cursor-pointer text-slate-300 text-lg no-underline hover:text-primary tracking-wide transition-colors duration-300">PROJECTS</a>
-                <a href="#contacts" class="cursor-pointer text-slate-300 text-lg no-underline hover:text-primary tracking-wide transition-colors duration-300">CONTACTS</a>
+                <a href="#contact" class="cursor-pointer text-slate-300 text-lg no-underline hover:text-primary tracking-wide transition-colors duration-300">CONTACTS</a>
             </div>
 
             <label for="mobile-menu-toggle" class="md:hidden cursor-pointer text-slate-300 hover:text-primary transition-colors">
@@ -30,10 +30,11 @@
             <div class="md:hidden bg-[#1e293b] border-b border-slate-700 shadow-xl absolute w-full left-0 top-full opacity-0 invisible -translate-y-4 peer-checked:opacity-100 peer-checked:visible peer-checked:translate-y-0 transition-all duration-300 ease-in-out">                <div class="flex flex-col items-center py-6 space-y-6">
                     <a href="#about" onclick="document.getElementById('mobile-menu-toggle').checked = false" class="text-lg font-bold tracking-widest text-slate-300 hover:text-primary no-underline transition-colors">ABOUT</a>
                     <a href="#projects" onclick="document.getElementById('mobile-menu-toggle').checked = false" class="text-lg font-bold tracking-widest text-slate-300 hover:text-primary no-underline transition-colors">PROJECTS</a>
-                    <a href="#contacts" onclick="document.getElementById('mobile-menu-toggle').checked = false" class="text-lg font-bold tracking-widest text-slate-300 hover:text-primary no-underline transition-colors">CONTACTS</a>
+                    <a href="#contact" onclick="document.getElementById('mobile-menu-toggle').checked = false" class="text-lg font-bold tracking-widest text-slate-300 hover:text-primary no-underline transition-colors">CONTACTS</a>
                 </div>
             </div>
         </nav>
+
     </header>
 
     <main class="w-full bg-slate-900 overflow-hidden">
@@ -84,7 +85,7 @@
             <div class="max-w-[1350px] mx-auto px-6 md:px-10 py:20">
                 <div class="flex flex-col md:flex-row gap-16">
 
-                    <div class="flex-1"> <!--Languages & Skills-->
+                    <div class="flex-1"> <!--Programming Languages & Skills-->
                         <h2 class="text-3xl font-bold text-white mb-4">Skills</h2>
                         <h3 class="text-xl text-slate-400 mb-4">Programming Languages</h3>
                         <div class="flex flex-wrap gap-3 mb-6">
@@ -140,7 +141,7 @@
                                 <div class="flex items-center justify-center w-14 h-14 mt-0 z-10 shrink-0 overflow-hidden shadow-md">
                                     <img src="assets/icons/ism.png" alt="NITK Logo" class="w-full h-full object-contain p-1">
                                 </div>
-                                <div class="w-0.5 h-full bg-slate-700 mt-1"></div>
+                                <div class="w-0.5 h-5 bg-slate-700 mt-1"></div>
                             </div>
                             <div class="pb-10">
                                 <p class="text-white font-semibold text-xl">Indian School Muscat</p>
@@ -157,6 +158,7 @@
 
         <br>
 
+        <!--Projects-->
         <section id="projects" class="max-w-[1350px] mx-auto px-6 md:px-10 py-20">
             <h2 class="text-3xl font-bold text-white mb-12">My Projects</h2>
 
@@ -211,15 +213,96 @@
                     </div>
 
                     <div class="flex gap-4 mt-auto pt-4 border-t border-slate-800/50">
-                        
                         <a href="https://github.com/assaampuhel/CrisisMap" target="_blank" rel="noopener noreferrer" class="hover:-translate-y-[1px] transition-transform duration-300">
                             <img src="assets/icons/github.png" alt="GitHub Repository" class="w-7 h-7 object-contain opacity-75 hover:opacity-100 transition-opacity">
                         </a>
-        
                     </div>
                 </div>
+
+
             </div>
         </section>
+
+        <!--Contact-->
+        <section id="contact" class="max-w-[1350px] mx-auto py-24 px-6 md:px-10 border-t border-slate-800/50">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-20 items-start">
+                
+                <div class="lg:col-span-3">
+                    
+                    <div class="mb-10 text-left">
+                        <h2 class="text-3xl font-bold text-white mb-4 tracking-tight">Let's Connect</h2>
+                        <p class="text-slate-400 text-lg">Have a project in mind, or just want to say hi? Drop me a message.</p>
+                    </div> 
+
+                    <form class="flex flex-col rounded-xl border border-slate-700 bg-slate-800/50 shadow-2xl overflow-hidden focus-within:border-primary transition-colors duration-300">
+                        
+                        <div class="flex items-center gap-1 p-2 border-b border-slate-700 bg-slate-800">
+                            <button type="button" class="p-2 text-slate-400 hover:text-white hover:bg-slate-700 rounded transition-colors" title="Bold">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M15.6 11.8c1-.7 1.6-1.8 1.6-3 0-2.3-1.9-4.1-4.2-4.1H6v14h7.5c2.3 0 4.2-1.9 4.2-4.2 0-1.3-.6-2.4-1.7-2.7zM8.5 6.5h3.9c1 0 1.8.8 1.8 1.8s-.8 1.8-1.8 1.8H8.5v-3.6zm4.5 9.8H8.5v-3.9h4.5c1.1 0 2 .9 2 2s-.9 1.9-2 1.9z"/></svg>
+                            </button>
+                            <button type="button" class="p-2 text-slate-400 hover:text-white hover:bg-slate-700 rounded transition-colors" title="Italic">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M10 4v3h2.2l-3.4 10H6v3h8v-3h-2.2l3.4-10H18V4z"/></svg>
+                            </button>
+                            <div class="w-px h-5 bg-slate-700 mx-1"></div>
+                            <button type="button" class="p-2 text-slate-400 hover:text-white hover:bg-slate-700 rounded transition-colors" title="Code snippet">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                            </button>
+                            <button type="button" class="p-2 text-slate-400 hover:text-white hover:bg-slate-700 rounded transition-colors" title="Insert link">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                            </button>
+                        </div> 
+                        
+                        <textarea rows="6" placeholder="Write your message here..." class="w-full bg-transparent p-4 text-slate-300 placeholder-slate-500 resize-y focus:outline-none leading-relaxed"></textarea>
+
+                        <div class="flex items-center justify-between p-3 bg-slate-800/80 border-t border-slate-700">
+                            <button type="button" class="p-2 text-slate-400 hover:text-white hover:bg-slate-700 rounded transition-colors flex items-center gap-2 text-sm" title="Attach file">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"></path></svg>
+                                <span class="hidden sm:inline">Attach</span>
+                            </button>
+                            <div class="flex items-center gap-2">
+                                <button type="button" class="px-4 py-2 text-sm font-semibold text-slate-300 hover:text-white transition-colors">Preview</button>
+                                <button type="submit" class="px-5 py-2 text-sm font-semibold bg-primary text-background rounded-md hover:bg-sky-300 hover:-translate-y-[2px] transition-all shadow-md flex items-center gap-2">
+                                    <span>Send</span>
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+                                </button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div> 
+                
+                <div class="lg:col-span-2 flex flex-col mt-8 lg:mt-0 pt-4">
+                    
+                    <div class="mb-4 text-left">
+                        <h3 class="text-2xl font-bold text-white mb-2">Find me online</h3>
+                        <p class="text-slate-400">Feel free to connect with me on these platforms!</p>
+                    </div>
+
+                    <div class="flex flex-row flex-wrap gap-4 mt-2">
+                        
+                        <a href="https://www.linkedin.com/in/asaph-samuel/" rel="noopener noreferrer" target="_blank" title="LinkedIn" class="p-4 rounded-xl border border-slate-800 bg-slate-900/40 text-slate-400 hover:text-primary hover:bg-slate-800 hover:border-slate-600 hover:-translate-y-1 transition-all duration-300 shadow-sm">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </a>
+
+                        <a href="https://www.instagram.com/_asaphsamuel/" rel="noopener noreferrer" target="_blank" title="Instagram" class="p-4 rounded-xl border border-slate-800 bg-slate-900/40 text-slate-400 hover:text-primary hover:bg-slate-800 hover:border-slate-600 hover:-translate-y-1 transition-all duration-300 shadow-sm">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+
+                        <a href="mailto:asaphsamuel.251cs212@nitk.edu.in" title="Email Me" class="p-4 rounded-xl border border-slate-800 bg-slate-900/40 text-slate-400 hover:text-primary hover:bg-slate-800 hover:border-slate-600 hover:-translate-y-1 transition-all duration-300 shadow-sm">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" /><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" /></svg>
+                        </a>
+
+                        <a href="https://www.threads.com/@_asaphsamuel" rel="noopener noreferrer" target="_blank" title="Threads" class="p-4 rounded-xl border border-slate-800 bg-slate-900/40 text-slate-400 hover:text-primary hover:bg-slate-800 hover:border-slate-600 hover:-translate-y-1 transition-all duration-300 shadow-sm">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" /></svg>
+                        </a>
+
+                    </div>
+
+                </div> 
+            </div> 
+        </section>
+
     </main>
 
     <footer>
