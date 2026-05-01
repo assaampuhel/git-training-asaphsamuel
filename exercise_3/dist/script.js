@@ -6,7 +6,7 @@ cardsArray.sort(() => Math.random() - 0.5);
 
 console.log(cardsArray);
 
-const gmaeBoard = document.getElementById('game-board');
+const gameBoard = document.getElementById('game-board');
 
 function initializeBoard(){
 
@@ -31,7 +31,41 @@ function initializeBoard(){
             </div>`;
     })
 
-    gmaeBoard.innerHTML = htmlContent;
+    gameBoard.innerHTML = htmlContent;
 }
 
+let hasFlippedCard = false;
+let lockBoard = false;
+let firstCard, secondCard;
+
+function attachEventListeners(){
+    const cards = document.querySelectorAll('.card');
+
+    cards.forEach(card => {
+        card.addEventListener('click', () => flipCard(card));
+    });
+}
+
+function flipCard(clickedCard){
+    if (lockBoard) return;
+
+    if(clickedCard === firstCard) return;
+
+    const innerCard = clickedCard.querySelector('.inner-card');
+    innerCard.classList.add('[transform:rotateY(180deg)]');
+
+    if(hasFlippedCard === false){
+        hasFlippedCard = true;
+        firstCard = clickedCard;
+        return;
+    }
+
+    hasFlippedCard = false;
+    secondCard = clickedCard;
+
+    checkMatch();
+}
+
+
 initializeBoard();
+attachEventListeners();
