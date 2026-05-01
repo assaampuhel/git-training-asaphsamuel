@@ -37,6 +37,7 @@ function initializeBoard(){
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
+let matches = 0;
 
 function attachEventListeners(){
     const cards = document.querySelectorAll('.card');
@@ -86,6 +87,16 @@ function disableCards(){
 
     firstCard.classList.add('pointer-events-none');
     secondCard.classList.add('pointer-events-none');
+
+    matches++;
+
+    if(matches === techIcons.length){
+        confetti({
+            particleCount: 200,
+            spread: 70,
+            origin: { y: 0.6 },
+        });
+    }
 
     [hasFlippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
