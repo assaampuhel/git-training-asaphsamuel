@@ -1,5 +1,5 @@
 const techIcons = [
-    'html', 'css', 'javascript', 'react', 'tailwind','iris', 'python', 'cpp', 'git', 'github', 'c', 'mongodb'];
+    'html', 'css', 'js', 'react', 'tailwindcss','iris', 'python', 'cpp', 'git', 'github', 'c', 'mongodb'];
 
 let cardsArray = [...techIcons, ...techIcons];
 cardsArray.sort(() => Math.random() - 0.5);
@@ -66,6 +66,42 @@ function flipCard(clickedCard){
     checkMatch();
 }
 
+function checkMatch(){
+    let isMatch = (firstCard.dataset.icon === secondCard.dataset.icon)
+
+    if(isMatch){
+        disableCards();
+    }else{
+        unflipCards();
+    }
+}
+
+function disableCards(){
+
+    firstCard.removeEventListener('click', flipCard);
+    secondCard.removeEventListener('click', flipCard);
+
+    firstCard.classList.remove('cursor-pointer');
+    secondCard.classList.remove('cursor-pointer');
+
+    firstCard.classList.add('pointer-events-none');
+    secondCard.classList.add('pointer-events-none');
+
+    [hasFlippedCard, lockBoard] = [false, false];
+    [firstCard, secondCard] = [null, null];
+}
+
+function unflipCards(){
+    lockBoard = true;
+
+    setTimeout(() => {
+        firstCard.querySelector('.inner-card').classList.remove('[transform:rotateY(180deg)]');
+        secondCard.querySelector('.inner-card').classList.remove('[transform:rotateY(180deg)]');
+
+        [hasFlippedCard, lockBoard] = [false, false];
+        [firstCard, secondCard] = [null, null];
+    }, 1000);
+}
 
 initializeBoard();
 attachEventListeners();
