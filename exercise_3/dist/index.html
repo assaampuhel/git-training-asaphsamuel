@@ -3,10 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Memory Box</title>
+    <title>Memory Match</title>
     <link href="./style.css" rel="stylesheet">
 </head>
-<body>
-    <script src="./script.js"></script>
+<body class="bg-slate-100 min-h-screen flex flex-col items-center justify-center p-4">
+    <header class="mb-8 text-center">
+        <h1 class="text-4xl font-extrabold text-slate-800 tracking-tight">Memory Match</h1>
+        <h3 class="text-slate-600 mt-2">Find all 15 pairs to win!</h3>
+    </header>
+
+    <main class="w-full">
+        <div id="game-board" class="grid grid-cols-6 gap-3 sm:gap-4 w-full max-w-4xl mx-auto">
+            
+        </div>
+    </main>
+
+    <script type="module" src="script.js"></script>
 </body>
 </html>
